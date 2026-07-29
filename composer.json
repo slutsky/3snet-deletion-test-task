@@ -1,0 +1,10 @@
+{
+    "require": {
+        "doctrine/orm": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shared\\Deletion\\": "./"
+        }
+    }
+}
