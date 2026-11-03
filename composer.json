@@ -1,4 +1,15 @@
 {
+    "name": "slutsky/3snet-deletion-test-task",
+    "description": "A service for checking whether entities can be deleted and for retrieving a list of dependent objects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikita Slutsky",
+            "email": "slutsky6@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
         "doctrine/orm": "^3.6",
         "psr/log": "^3.0",
