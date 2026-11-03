@@ -1,7 +1,7 @@
 {
     "name": "slutsky/3snet-deletion-test-task",
     "description": "A service for checking whether entities can be deleted and for retrieving a list of dependent objects.",
-    "type": "library",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {

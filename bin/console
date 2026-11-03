@@ -1,10 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use Symfony\Component\Config\FileLocator;
+use Shared\Deletion\Kernel;
 use Symfony\Component\Console\Application;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 if (!is_dir(dirname(__DIR__) . '/vendor')) {
     throw new LogicException('Dependencies are missing. Try running "composer install".');
@@ -17,11 +15,10 @@ if (!is_file(dirname(__DIR__) . '/vendor/autoload_runtime.php')) {
 require_once dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
 return function (array $context) {
-    $container = new ContainerBuilder();
-    $loader = new PhpFileLoader($container, new FileLocator(__DIR__ . '/../config'));
-    $loader->load('services.php');
+    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+    $kernel->boot();
 
-    $application = new Application('3snet-deletion-test-task', '0.1', $container);
+    $application = new Application('3snet-deletion-test-task', '0.1', $kernel->getContainer());
 
     return $application;
 };

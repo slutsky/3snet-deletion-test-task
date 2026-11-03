@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Shared\Deletion\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Shared\Deletion\DeletionService;
 use Shared\Deletion\Dto\{DependentGroupDto, OrderedPlanDto, RelationsDto};
 use Shared\Deletion\Middleware\DeletionMiddlewareInterface;
 use Throwable;
