@@ -4,7 +4,8 @@
         "psr/log": "^3.0",
         "symfony/console": "^8.1",
         "symfony/dependency-injection": "^8.1",
-        "symfony/config": "^8.1"
+        "symfony/config": "^8.1",
+        "symfony/runtime": "^8.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5"
@@ -17,6 +18,11 @@
     "autoload-dev": {
         "psr-4": {
             "Shared\\Deletion\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
         }
     }
 }
