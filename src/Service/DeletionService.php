@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shared\Deletion;
+namespace Shared\Deletion\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
